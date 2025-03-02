@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContainerDataSet" targetNamespace="http://tempuri.org/ContainerDataSet.xsd" xmlns:mstns="http://tempuri.org/ContainerDataSet.xsd" xmlns="http://tempuri.org/ContainerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ContainerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ContainerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TaskView.Properties.Settings.GlobalReference.Default.ContainerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmployeeTasksTableAdapter" GeneratorDataComponentClassName="EmployeeTasksTableAdapter" Name="EmployeeTasks" UserDataComponentName="EmployeeTasksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ContainerConnectionString (Settings)" DbObjectName="Container.dbo.EmployeeTasks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT empno, ename, salary, deptno, hireDate, deptDescription, task FROM dbo.EmployeeTasks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="empno" DataSetColumn="empno" />
+              <Mapping SourceColumn="ename" DataSetColumn="ename" />
+              <Mapping SourceColumn="salary" DataSetColumn="salary" />
+              <Mapping SourceColumn="deptno" DataSetColumn="deptno" />
+              <Mapping SourceColumn="hireDate" DataSetColumn="hireDate" />
+              <Mapping SourceColumn="deptDescription" DataSetColumn="deptDescription" />
+              <Mapping SourceColumn="task" DataSetColumn="task" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContainerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ContainerDataSet" msprop:Generator_DataSetName="ContainerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EmployeeTasks" msprop:Generator_RowEvHandlerName="EmployeeTasksRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeTasksRowDeleted" msprop:Generator_RowDeletingName="EmployeeTasksRowDeleting" msprop:Generator_RowEvArgName="EmployeeTasksRowChangeEvent" msprop:Generator_TablePropName="EmployeeTasks" msprop:Generator_RowChangedName="EmployeeTasksRowChanged" msprop:Generator_RowChangingName="EmployeeTasksRowChanging" msprop:Generator_TableClassName="EmployeeTasksDataTable" msprop:Generator_RowClassName="EmployeeTasksRow" msprop:Generator_TableVarName="tableEmployeeTasks" msprop:Generator_UserTableName="EmployeeTasks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empno" msprop:Generator_ColumnPropNameInRow="empno" msprop:Generator_ColumnPropNameInTable="empnoColumn" msprop:Generator_ColumnVarNameInTable="columnempno" msprop:Generator_UserColumnName="empno" type="xs:int" />
+              <xs:element name="ename" msprop:Generator_ColumnPropNameInRow="ename" msprop:Generator_ColumnPropNameInTable="enameColumn" msprop:Generator_ColumnVarNameInTable="columnename" msprop:Generator_UserColumnName="ename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="salary" msprop:Generator_ColumnPropNameInRow="salary" msprop:Generator_ColumnPropNameInTable="salaryColumn" msprop:Generator_ColumnVarNameInTable="columnsalary" msprop:Generator_UserColumnName="salary" type="xs:double" minOccurs="0" />
+              <xs:element name="deptno" msprop:Generator_ColumnPropNameInRow="deptno" msprop:Generator_ColumnPropNameInTable="deptnoColumn" msprop:Generator_ColumnVarNameInTable="columndeptno" msprop:Generator_UserColumnName="deptno" type="xs:int" minOccurs="0" />
+              <xs:element name="hireDate" msprop:Generator_ColumnPropNameInRow="hireDate" msprop:Generator_ColumnPropNameInTable="hireDateColumn" msprop:Generator_ColumnVarNameInTable="columnhireDate" msprop:Generator_UserColumnName="hireDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="deptDescription" msprop:Generator_ColumnPropNameInRow="deptDescription" msprop:Generator_ColumnPropNameInTable="deptDescriptionColumn" msprop:Generator_ColumnVarNameInTable="columndeptDescription" msprop:Generator_UserColumnName="deptDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="task" msprop:Generator_ColumnPropNameInRow="task" msprop:Generator_ColumnPropNameInTable="taskColumn" msprop:Generator_ColumnVarNameInTable="columntask" msprop:Generator_UserColumnName="task" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:EmployeeTasks" />
+      <xs:field xpath="mstns:empno" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
